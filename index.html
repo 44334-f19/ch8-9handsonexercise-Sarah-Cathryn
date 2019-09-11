@@ -1,13 +1,147 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Horseman Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
 		
+            table {margin: auto;
+                    border: 1px solid #000;
+                    border-spacing: 0px;}
+            td, th {padding: 1em;}
+            
+            #wrapper {display: flex;
+                    flex-direction: row;}
+            form {background-color: #e6ffff;
+                    font-family: Arial, sans-serif;
+                    padding: 10px;
+                    min-width: 400px;}
+            fieldser {border: 2px ridge #000;
+                    padding: 10px;}
+            lable {float: left;
+                    width: auto;
+                    text-align: right;
+                    padding-right: 10px;
+                    clear: left;
+                    margin-top: 10px;}
+            imput, textarea {margin-top: 10px;
+                display: block;}
+            
+            #Questions {flex: 2;}
+            #MusicPrograms {flex: 1.5;}
+            #textanswer {flex: 4;}
+            
+            input[type="radio"], input[type="checkbox"] {display: inline;}
+            
 		</style>
 	</head> 
 <body> 
 
+<h1>Movie Recap</h1>
+    
+    <table>
+    <thread>
+        <tr>
+            <th id="T">Type</th>
+            <th id="I">Information</th>
+        </tr>
+    </thread>
+    
+    <tbody>
+        <tr>
+            <td headers="T">Title</td>
+            <td headers="I"><i>The Secret of Moonacre</i></td>
+        </tr>
+        <tr>
+            <td headers="T">Director</td>
+            <td headers="I">Gábor Csupó</td>
+        </tr>
+         <tr>
+            <td headers="T">Leading Actress</td>
+            <td headers="I">Dakota Blue Richrds</td>
+        </tr>
+        <tr>
+            <td headers="T">Leading Actor</td>
+            <td headers="I">Augustus Prew</td>
+        </tr>
+        <tr>
+            <td headers="T">Rating</td>
+            <td headers="I">PG</td>
+        </tr>
+        <tr>
+            <td headers="T">Description</td>
+            <td headers="I">Set in the late 1800s-early 1900s, <i>The Secret of Moonacre</i> is the story of one Maria Merryweather. When her father dies, Maria and her nurse Miss Heliotrope are sent the the countryside to live with her uncle, Sir Benjamin Merryweather. Upon arrival she is attacked in her carriage by the ruffian scum of an opposing family, the de Noir clan. It is up to her to unite the families, break a curse and bring back magic to the Valley of Moonacre. Can she do it?</td>
+        </tr>
+        <tr>
+            <td headers="T">Review Link</td>
+            <td headers="I"><a href="https://www.commonsensemedia.org/movie-reviews/the-secret-of-moonacre">Common Scense Media</a></td>
+        </tr>
+    </tbody>
+</table>
+    
+<h1>Music Survey</h1>
+    
+    <form method="post" action="http://webdecbasics.net/scripts/demo.php">
+    
+        <fieldset id="Person">   
+            <label for="myName">*Name:</label><input type="text" name="myName" id="myName" required="required" placeholder="First Last">
+            
+            <label for="myEmail">*E-mail:</label><input type="email" name="myEmail" id="myEmail" required="required" placeholder="you@yourdomain.com">
+        </fieldset>
+            
+        <div id="wrapper">
+        
+        <fieldset id="Questions">
+            <legend>Inquary</legend> 
+Genres You Listen to: <br>
+            <input type="checkbox" name="Genre" id="G" value="Genres">Pop<br>
+            
+            <input type="checkbox" name="Genre" id="G" value="Genres">Rock<br>
+            
+            <input type="checkbox" name="Genre" id="G" value="Genres">Classical<br>
+            
+            <input type="checkbox" name="Genre" id="G" value="Genres">Showtunes<br>
+            
+            <input type="text" name="Genre" id="G" value="Other"><br><br>
+            
+            
+Where do you listen to music most: <br>
+            <input type="radio" name="Where" id="Where" value="Where">Studying<br>
+            
+            <input type="radio" name="Where" id="Where" value="Where">Working out<br>
+            
+            <input type="radio" name="Where" id="Where" value="Where">Around the house<br>
+            
+            <input type="radio" name="Where" id="Where" value="Where">Other<br>
+            
+            </fieldset>
+            
+        <fieldset id="MusicPrograms">
+            <legend>Involvement</legend> <lable>Are you in any music programs:</lable><br> <select size="1" name="program" id="program">
+            <option value="No">No</option>
+            <option value="No">Instramental</option>
+            <option value="No">Vocal</option>
+            <option value="No">Dance</option>
+            </select>
+            
+        </fieldset>
+            
+        <fieldset id="textanswer">
+        <legend>Meaning of Music</legend> 
+            <label>What does music mean to you?</label> <br>
+            <input type="text" name="meaning" id="meaning" value="Your answer here"> <br> 
+            
+        </fieldset>
+            
+             </div>
+        
+            <br>
+            
+            <input id="reset" type="reset" value="Reset">
+            
+            <input id="mySubmit" type="submit" value="Submit">
+    
+    </form>
+    
 </body> 
 </html> 
