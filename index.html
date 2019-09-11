@@ -10,8 +10,11 @@
                     border-spacing: 0px;}
             td, th {padding: 1em;}
             
+            #left {float: right;}
+            
             #wrapper {display: flex;
-                    flex-direction: row;}
+                    flex-direction: row;
+                    text-align: left;}
             form {background-color: #e6ffff;
                     font-family: Arial, sans-serif;
                     padding: 10px;
@@ -33,6 +36,21 @@
             
             input[type="radio"], input[type="checkbox"] {display: inline;}
             
+    @media only screen and (max-width: 768px) {
+    #wrapper {grid-template-columns: auto;
+              grid-template-rows: 200px auto 100px;}
+        
+        nav {grid-row: 4/5;
+        grid-column: 1/2;}
+    main {grid-row: 2/3;
+        grid-column: 1/2;}
+    aside {grid-row: 3/4;
+        grid-column: 1/2;}
+    header {grid-row: 1/2;
+        grid-column: 1/2;}
+    footer {grid-row: 5/6;
+        grid-column: 1/2;} 
+        
 		</style>
 	</head> 
 <body> 
@@ -48,6 +66,7 @@
     </thread>
     
     <tbody>
+        
         <tr>
             <td headers="T">Title</td>
             <td headers="I"><i>The Secret of Moonacre</i></td>
@@ -68,6 +87,7 @@
             <td headers="T">Rating</td>
             <td headers="I">PG</td>
         </tr>
+        
         <tr>
             <td headers="T">Description</td>
             <td headers="I">Set in the late 1800s-early 1900s, <i>The Secret of Moonacre</i> is the story of one Maria Merryweather. When her father dies, Maria and her nurse Miss Heliotrope are sent the the countryside to live with her uncle, Sir Benjamin Merryweather. Upon arrival she is attacked in her carriage by the ruffian scum of an opposing family, the de Noir clan. It is up to her to unite the families, break a curse and bring back magic to the Valley of Moonacre. Can she do it?</td>
@@ -117,11 +137,13 @@ Where do you listen to music most: <br>
             </fieldset>
             
         <fieldset id="MusicPrograms">
-            <legend>Involvement</legend> <lable>Are you in any music programs:</lable><br> <select size="1" name="program" id="program">
+            <legend>Involvement</legend> <lable>Are you in any music programs:</lable><br> 
+            <select size="3" name="jumpmenu" id="jumpmenu">
             <option value="No">No</option>
-            <option value="No">Instramental</option>
-            <option value="No">Vocal</option>
-            <option value="No">Dance</option>
+            <option value="Instramental">Instramental</option>
+            <option value="Vocal">Vocal</option>
+            <option value="Dance">Dance</option>
+            <option value="Other">Other</option>
             </select>
             
         </fieldset>
@@ -129,7 +151,7 @@ Where do you listen to music most: <br>
         <fieldset id="textanswer">
         <legend>Meaning of Music</legend> 
             <label>What does music mean to you?</label> <br>
-            <input type="text" name="meaning" id="meaning" value="Your answer here"> <br> 
+            <textarea name="comments" id="meaning" cols="60" rows="3">Answer Here </textarea>
             
         </fieldset>
             
@@ -142,6 +164,12 @@ Where do you listen to music most: <br>
             <input id="mySubmit" type="submit" value="Submit">
     
     </form>
+    
+    <footer>
+Sarah-Cate Horseman
+        
+<a href="mailto:s531966@nwmissouri.edu">s531966@nwmissouri.edu</a>
+    </footer>
     
 </body> 
 </html> 
